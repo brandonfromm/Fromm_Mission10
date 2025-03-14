@@ -10,6 +10,7 @@ function Bowlers () {
         const fetchBowlers = async () => {
             const response = await fetch('https://localhost:5010/api/Bowling');
             const data = await response.json();
+            console.log(data);
             setBowlers(data);
         }
         fetchBowlers();
@@ -17,7 +18,6 @@ function Bowlers () {
 
     return (
         <>
-            <h1>Bowlers in the League</h1>
             <table>
                 <thead>
                     <tr>
