@@ -22,6 +22,7 @@ namespace backend.Controllers
         {
             var bowlers = _bowlingcontext.Bowlers
                 .Include(b => b.Team)
+                .Where(b => b.Team.TeamName == "Marlins" || b.Team.TeamName == "Sharks")
                 .ToList();
             return (bowlers);
         }
